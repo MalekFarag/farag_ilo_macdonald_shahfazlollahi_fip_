@@ -5,16 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>bruh site</title>
-
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/066bb77ccc.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
 </head>
 <body>
     <header class="header">
-        <img src="images/logo.jpg" alt="Logo" class="mainLogo">
-        <nav class="mainNav">
+        <img src="images/logo.png" alt="Logo" class="mainLogo">
+        <div class="burger">
+            <div class="bLine"></div>
+            <div class="bLine"></div>
+            <div class="bLine"></div>
+        </div>
+
+        <nav class="mainNav hidden">
             <ul class="navList">
                 <li class="navItem">Home</li>
                 <li class="navItem">Campaign</li>
@@ -36,28 +43,36 @@
 
         </section>
 
+        <div class="divide"></div>
+
         <!-- about campaign section -->
         <section class="campaign">
             <div class="buzz">
                 <i class="fas fa-hotdog"></i>
-                <p>Safe sex is great sex</p>
+                <p>Safe sex is great sex <br>
+                    <span>add tag line</span></p>
             </div>
 
             <div class="buzz">
                 <i class="fas fa-dove"></i>
-                <p>The Birds and the Bees</p>
+                <p>The Birds and the Bees <br>
+                    <span>add tag line</span</p>
             </div>
 
             <div class="buzz">
                 <i class="fas fa-book"></i>
-                <p>Come get some...info</p>
+                <p>Come get some...info <br>
+                    <span>add tag line</span</p>
             </div>
 
         </section>
 
+        <div class="divide"></div>
+
         <!-- about section -->
         <section class="about">
-            <img src="images/campaign.jpg" alt="people ahppy">
+            <h2>About Us</h2>
+            <img src="images/about.jpg" alt="people happy">
             <p>At an age where most are still struggling to come to terms with who they are, as a society, we have
                 failed to do enough ease or make the journey less confusing. This why we have launched the campaign
                 termed "Safe space: The birds and the Bees" where we provide information about safer sex in the
@@ -66,19 +81,29 @@
 
         <!-- contact section -->
         <section class="contact">
+            <h2>We want to hear from you!</h2>
+            <p>We're here to help</p>
+
             <form action="" method="post">
                 <input type="text" placeholder="name">
                 <input type="text" placeholder="email">
-                <input type="text" placeholder="xxx-xxx-xxxx">
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+                <input type="text" placeholder="phone">
+                <textarea name="" id="message" placeholder="message"></textarea>
+                <button type="submit">Send</button>
             </form>
 
         </section>
 
+        <div class="divide"></div>
+
         <!-- donate section -->
         <section class="donate">
+            <h2>Help us spread the word</h2>
+            <p>your generous donation goes directly to helping people in need</p>
             <button type="submit">Donate</button>
         </section>
+
+        <div class="divide"></div>
     </main>
     <!-- end of main content -->
 
@@ -86,11 +111,11 @@
     <footer class="footer">
         <nav class="footerNav">
             <ul class="navList">
-                <li class="navItem">Home</li>
-                <li class="navItem">Campaign</li>
-                <li class="navItem">About Us</li>
-                <li class="navItem">Contact</li>
-                <li class="navItem">Donate</li>
+                <a href="#"><li class="navItem">Home</li></a>
+                <a href="#"><li class="navItem">Campaign</li></a>
+                <a href="#"><li class="navItem">About Us</li></a>
+                <a href="#"><li class="navItem">Contact</li></a>
+                <a href="#"><li class="navItem">Donate</li></a>
             </ul>
         </nav>
 
