@@ -26,6 +26,8 @@ body{
     z-index: 99;
     width: 100%;
 
+    margin: 0 auto;
+
     .white{
         margin: 0 auto;
         width: 100%;
@@ -65,7 +67,7 @@ body{
         pointer-events: none;
         transform: translateY(-500px);
 
-        transition: all .3s ease;
+        transition: all .4s ease;
         .navList{
             padding: 10px auto;
             width: 95%;
@@ -110,14 +112,23 @@ body{
 
     .hero{
         width: 100%;
-
+        padding-top: 20px;
         h2{
-            font-size: 18px;
-            line-height: 22px;
+            font-size: 22px;
+            line-height: 26px;
+            span{
+                font-size: 36px;
+                letter-spacing: 2px;
+                line-height: 42px;
+            }
         }
-        
 
-        // add background image
+        .safe{
+            margin-top: 20px;
+            font-size: 36px;
+            letter-spacing: 4px;
+            color: rgba(216, 0, 0, .6);
+        }
     }
 
     #campaign{
@@ -141,6 +152,12 @@ body{
             span{
                 font-size: 16px;
             }
+
+            .learn{
+                color: rgba(216, 0, 0, .6);
+                text-decoration: underline;
+                cursor: pointer;
+            }
         }
         .buzz:nth-child(2){
             text-align: right;
@@ -151,6 +168,13 @@ body{
                 margin-top: 20px;
             }
         }
+    }
+
+    .buzzCopy{
+            width: 90%;
+            margin: 0 auto;
+            font-size: 18px;
+            line-height: 22px;
     }
 
     #about{
@@ -241,7 +265,17 @@ body{
 
         margin: 40px auto;
     }
+    .divide1{
+        height: 1px;
+        width: 85%;
+        border-radius: 1px;
+        background-color: rgba(216, 0, 0, .6);
 
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 35px;
+        margin-bottom: 40px;
+    }
     #donate{
         h2{
             font-size: 24px;
