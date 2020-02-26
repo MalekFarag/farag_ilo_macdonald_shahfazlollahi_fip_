@@ -7,7 +7,7 @@ function login($username, $password, $ip){
     $pdo = Database::getInstance()->getConnection();
 
     // check user existance
-    $check_exist_query = 'SELECT COUNT(*) FROM tbl_user WHERE user_name= :username'; // sanitation
+    $check_exist_query = 'SELECT COUNT(*) FROM tbl_admins WHERE username= :username'; // sanitation
     $user_set = $pdo->prepare($check_exist_query);
     $user_set->execute( // sanitation pt2
         array(
@@ -17,8 +17,7 @@ function login($username, $password, $ip){
 
     if($user_set->fetchColumn()>0){
         //user exist
-        $get_user_query = 'SELECT * FROM tbl_user WHERE user_name = :username';
-        $get_user_query .= ' AND user_password = :password';
+        $get_user_query = 'SELECT * FROM tbl_admins WHERE username = :username AND password = :password';
         $user_check = $pdo->prepare($get_user_query);
         $user_check->execute(
             array(
@@ -27,14 +26,14 @@ function login($username, $password, $ip){
             )
         );
     while($found_user = $user_check->fetch(PDO::FETCH_ASSOC)){
-        $id = $found_user['user_id'];
+        $id = $found_user['id'];
 
         // login successful
         $message = 'logged in successfully!';
-        $_SESSION['user_id'] = $id;
-        $_SESSION['user_name'] = $found_user['first_name'];
+        $_SESSION['id'] = $id;
+        $_SESSION['name'] = $found_user['name'];
         // updating database
-        $update_query = 'UPDATE tbl_user SET user_ip = :ip WHERE user_id = :id';
+        $update_query = 'UPDATE tbl_admins SET ip = :ip WHERE id = :id';
         $update_set = $pdo->prepare($update_query);
         $update_set->execute(
                 array(
@@ -56,7 +55,7 @@ function login($username, $password, $ip){
 }
 
 function confirm_logged_in(){
-    if(!isset($_SESSION['user_id'])){
+    if(!isset($_SESSION['id'])){
         redirect_to('admin_login.php');
     }
 }

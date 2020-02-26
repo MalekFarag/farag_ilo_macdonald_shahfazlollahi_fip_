@@ -1,17 +1,29 @@
 <?php 
 require_once '../load.php';
 confirm_logged_in();
-
+$ip = $_SERVER['REMOTE_ADDR'];
 
 if(isset($_POST['submit'])){
-    $fname = trim($_POST['fname']);
+    $name = trim($_POST['name']);
     $username = trim($_POST['username']);
+    $password = trim($_POST['password']);
     $email = trim($_POST['email']);
 
-    if(empty($email) || empty($username) || empty($fname)){
+    if(empty($username) || empty($username) || empty($name) || empty($email) || empty($password)){
         $message = 'please fill require fields';
     }else{
-        $message = createuser($fname, $username, $email);
+        // Validate password strength
+        $uppercase = preg_match('@[A-Z]@', $password);
+        $lowercase = preg_match('@[a-z]@', $password);
+        $number    = preg_match('@[0-9]@', $password);
+        $specialChars = preg_match('@[^\w]@', $password);
+
+        if(!$uppercase || !$lowercase || !$number || !$specialChars || strlen($password) < 8) {
+            echo 'Password should be at least 8 characters in length and should include at least one upper case letter, one number, and one special character.';
+        }else{
+            echo 'Creating user...';
+            $message = createuser($username, $name, $email, $password, $ip);
+        }
     }
 }
 
@@ -30,13 +42,14 @@ if(isset($_POST['submit'])){
 
 <?php echo !empty($message)? $message: ''; ?>
 <form action="admin_createuser.php" method="post">
-    <label for="">First Name</label><br>
-    <input type="text" name='fname' value=''><br><br>
+    <label for="">Name</label><br>
+    <input type="text" name='name' value=''><br><br>
     <label for="">Username</label><br>
     <input type="text" name='username' value=''><br><br>
+    <label for="">Password</label><br>
+    <input type="text" name='password' value=''><br><br>
     <label for="">Email</label><br>
     <input type="email" name='email' value=''><br><br>
-    <label for="">*Password is created for you</label><br>
 
     <button name="submit">Create User</button>
 </form>

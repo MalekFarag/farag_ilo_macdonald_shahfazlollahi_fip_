@@ -11,7 +11,7 @@
     <title>Admin Dashboard</title>
 </head>
 <body>
-    <h2>Welcome, <?php echo $_SESSION['user_name']; ?></h2><br>
+    <h2>Welcome, <?php echo $_SESSION['name']; ?></h2><br>
 
 
     <a href="admin_createuser.php">Create User</a>

@@ -86,7 +86,6 @@ function sendMessage($name, $email, $phone, $body, $ip){
 }
 
 function newsletterSignup($name, $email, $phone, $ip){
-    $thankYou = '';
     
     $pdo = Database::getInstance()->getConnection();
 

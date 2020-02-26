@@ -1,12 +1,12 @@
 <?php
 
 
-function createuser($fname, $username, $email){
+function createuser($username, $name, $email, $password, $ip){
     
     $pdo = Database::getInstance()->getConnection();
 
      // check user existance
-     $check_email_query = 'SELECT COUNT(user_name) AS num FROM tbl_user WHERE user_name = :username'; 
+     $check_email_query = 'SELECT COUNT(username) AS num FROM tbl_admins WHERE username = :username'; 
      $user_set = $pdo->prepare($check_email_query);
      $user_set->execute(
          array(
@@ -19,8 +19,6 @@ function createuser($fname, $username, $email){
      if($row['num'] > 0){
         $message = 'username is already registered';
     }else{
-        //creating password for user
-        $password = md5(rand(0,1000)); 
 
         //phpmailer config
         $mail = new PHPMailer\PHPMailer\PHPMailer();
@@ -39,22 +37,23 @@ function createuser($fname, $username, $email){
         
 
         $mail->isHTML(true);
-        $mail->Subject='Created User | Nick & Malek Research'; 
+        $mail->Subject='Created Admin Account | HIV AIDS Connection'; 
         $mail->Body='
-
-        Hello from Nick & Malek! <br><br>
+        <br>
 
         Thanks for signing up!<br><br>
-        Your account admin user has been Created!
+        Your admin account has been Created!
         <br><br><br>
         ------------------------<br>
         Here are your login credentials!<br>
         Email: '.$username.'<br>
         Password: '.$password.'<br><br>
 
-        Login at http://localhost/farag_m_shahfazlollahi_n_create_user-master/admin/admin_login.php <br>
+        Login at domainName.com/admin/login.php <br>
         ------------------------<br>
         <br><br><br>
+        Thanks again!<br>
+        - The HIV AIDS Connection Team<br><br>
         ';
 
         if(!$mail->send()){
@@ -62,20 +61,20 @@ function createuser($fname, $username, $email){
             return 'user creation did not got through';
         }else{
             //creating user sql query from form details
-            $create_user_query = "INSERT INTO tbl_user (user_id, first_name, user_name, user_email, user_password, user_ip) VALUES (NULL, :fname, :username, :email, :password, 'no');";
+            $create_user_query = "INSERT INTO tbl_admins (id, username, name, email, password, ip) VALUES (NULL, :username, :name, :email, :password, :ip);";
 
             $user_signup = $pdo->prepare($create_user_query);
             $user_signup->execute(
                 array(
-                    ':fname'=>$fname,
+                    ':name'=>$name,
                     ':username'=>$username,
                     ':email'=>$email,
-                    ':password'=>$password
+                    ':password'=>$password,
+                    ':ip'=>$ip
                 )
             );
             
             redirect_to('index.php');
-            $message = 'created user';
         }
     }
 }
