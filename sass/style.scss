@@ -63,10 +63,8 @@ body{
         position: relative;
         z-index: -1;
         width: 100%;
-
-        pointer-events: none;
-        transform: translateY(-500px);
-
+        top: -500px;
+        pointer-events: none; 
         transition: all .4s ease;
         .navList{
             padding: 10px auto;
@@ -101,7 +99,7 @@ body{
     .navOn{
         background-color: white;
         pointer-events: all;
-        transform: translateY(0px);
+        top:0;
     }
 }
 
