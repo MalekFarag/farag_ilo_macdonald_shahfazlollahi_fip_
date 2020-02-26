@@ -15,6 +15,7 @@
 
 
     <a href="admin_createuser.php">Create User</a>
+    <a href="admin_createpost.php">Create Blog Post</a>
     <a href="admin_logout.php">Logout</a>
 </body>
 </html>
