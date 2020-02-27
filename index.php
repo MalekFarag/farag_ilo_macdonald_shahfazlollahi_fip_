@@ -74,59 +74,60 @@
     <!-- main content container -->
     <main id="content">
 
-        <!-- hero image  -->
+        <!-- about section -->
         <section class="hero">
-            <h2>Hi, <br>
-                We're here to help... <br>
-                <span>Everyone</span> 
-            </h2>
+            <img src="images/rose.png" class='rose' alt="rose">
+            <div class="logoCircle">
+                <p>SAFE</p>
+                <div class="line"></div>
+                <p>SPACE</p>
+            </div>
 
+            <div class="about">
+                <h2>About</h2>
+                <p class='copy'>We are a safe space to discuss and provide information regarding safe sex for everyone! We provide information especially for the LGBTQA community, explaining how to keep them healthy and protect themselves; no matter a persons sexual preference or gender identity.</p>
+            </div>
         </section>
-
-        <div class="divide1"></div>
 
         <!-- about campaign section -->
         <section id="campaign">
-            <div class="buzz">
-                <i class="fas fa-hotdog"></i>
-                <p>Safe sex is great sex <br>
-                    <span>safety should always come first</span></p>
+            <div class="buzzwords">
+                <div class="buzz">
+                    <i class="fas fa-hotdog"></i>
+                    <p>Safe sex is great sex <br>
+                        <span>info on safe sex</span></p>
+                </div>
+
+                <div class="buzz">
+                    <i class="fas fa-dove"></i>
+                    <p>The Birds and the Bees <br>
+                        <span>any gender relationship</span</p>
+                </div>
+
+                <div class="buzz">
+                    <i class="fas fa-book"></i>
+                    <p>Community Support <br>
+                        <span class="learn">Let's learn together</span></p>
+                </div>
             </div>
 
-            <div class="buzz">
-                <i class="fas fa-dove"></i>
-                <p>The Birds and the Bees <br>
-                    <span>sadly they don't wear condoms...</span</p>
-            </div>
+            <div class="info">
+                <h2>Information</h2>
+                <p class='copy'>At an age where most are still struggling to come to terms with who they are, as a society, we have failed to do enough ease or make the journey less confusing. This why we have launched the campaign termed "Safe space: The birds and the Bees" where we provide information about safer sex in the LBGTQA community.</p>
 
-            <div class="buzz">
-                <i class="fas fa-book"></i>
-                <p>Come get some...info <br>
-                    <span class="learn">Learn more...</span></p>
             </div>
+            
+
+            <img src="images/rose.png" class='rose' alt="rose">
         </section>
 
-        <p class="buzzCopy">Traditional safe sex guides are often structured in a way that presumes everyone’s gender
-            (male/female/nonbinary/trans) is the same as the sex they were assigned at birth (male/female/intersex
-            or differences in sexual development).</p>
-
-        <div class="divide"></div>
-
-        <!-- about section -->
-        <section id="about">
-            <h2>About Us</h2>
-            <img src="images/about.jpg" alt="people happy">
-            <p>At an age where most are still struggling to come to terms with who they are, as a society, we have
-                failed to do enough ease or make the journey less confusing. This why we have launched the campaign
-                termed "Safe space: The birds and the Bees" where we provide information about safer sex in the
-                LBGTQA community.</p>
-        </section>
 
         <!-- contact section -->
         <section id="contact">
+            <img src="images/rose.png" class='rose' alt="">
             <h2>We want to hear from you!</h2>
-            <p>We're here to help</p>
-
+            <p class='copy'>We're here to help and would love to answer any questions you have!
+            </p>
             <?php echo !empty($message)? $message: ''; ?>
             <form action="index.php" method="post">
                 <input type="text" name='name' placeholder="name" required>
@@ -135,19 +136,19 @@
                 <textarea name="body" id="body" placeholder="message" required></textarea>
                 <button name="submit">Send</button>
             </form>
-        </section>
 
-        <div class="divide"></div>
+           
+        </section>
 
         <!-- donate section -->
         <section id="donate">
+        <img src="images/rose.png" class='rose' alt="">
             <h2>Help us spread the word</h2>
-            <p>your generous donation goes directly to helping people in need</p>
+            <p class='copy'>In partnership with the Regional HIV/AIDS Connection, you can support us; helping raise awareness and keep everyone healthy and protected</p>
             <!-- link to paypal or something -->
             <button type="submit">Donate</button>
         </section>
 
-        <div class="divide"></div>
     </main>
     <!-- end of main content -->
 
@@ -180,6 +181,11 @@
             <a href="#"><i class="fab fa-youtube"></i></a>
         </div>
     </footer>
+
+    <div class="extra">
+            <p>HIV/AIDS Connection&copy; - London 2020</p>
+        <a href="admin/admin_login.php">admin area</a>
+        </div>
 
 
     <script src="js/main.js"></script>

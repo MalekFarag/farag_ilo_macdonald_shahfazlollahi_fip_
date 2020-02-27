@@ -23,18 +23,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Login Page</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h2>Login Page</h2>
-    <?php echo !empty($message)? $message: ''; ?>
-    <form action="admin_login.php" method="post">
-        <label for="username">Username:</label>
-        <input type="text" name="username" id="username" value="">
+<header class="header">
+        <div class="white">
+            <a href="#content"><img src="../images/logo.png" alt="Logo" class="mainLogo"></a>
+            <div class="burger">
+                <div class="bLine"></div>
+                <div class="bLine"></div>
+                <div class="bLine"></div>
+            </div>
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password" value="">
+        </div>
+        
 
-        <button name="submit">Submit</button>
-    </form>
+        <nav class="mainNav">
+            <ul class="navList">
+                <a href="index.php"><li class="navItem">Home</li></a>
+                <a href="admin_createpost"><li class="navItem">Write Post</li></a>
+                <a href="admin_createuser.php"><li class="navItem">Create Account</li></a>
+                <a href="admin_logout.php"><li class="navItem">Logout</li></a>
+                <a href="../index.php"><li class="navItem">Main Site</li></a>
+            </ul>
+        </nav>
+    </header>
+    <main class="adminArea loginPage">
+        <h2>Admin Login</h2>
+        <?php echo !empty($message)? $message: ''; ?>
+        <form action="admin_login.php" method="post">
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" value="">
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" value="">
+
+            <button name="submit">Login</button>
+        </form>
+    </main>
+
+    <script src="../js/main.js"></script>
+    
 </body>
 </html>

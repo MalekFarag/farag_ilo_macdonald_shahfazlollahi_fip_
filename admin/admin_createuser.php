@@ -35,8 +35,33 @@ if(isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create User</title>
+    <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<header class="header">
+        <div class="white">
+            <a href="#content"><img src="../images/logo.png" alt="Logo" class="mainLogo"></a>
+            <div class="burger">
+                <div class="bLine"></div>
+                <div class="bLine"></div>
+                <div class="bLine"></div>
+            </div>
+
+        </div>
+        
+
+        <nav class="mainNav">
+            <ul class="navList">
+                <a href="index.php"><li class="navItem">Home</li></a>
+                <a href="admin_createpost"><li class="navItem">Write Post</li></a>
+                <a href="admin_createuser.php"><li class="navItem">Create Account</li></a>
+                <a href="admin_logout.php"><li class="navItem">Logout</li></a>
+                <a href="../index.php"><li class="navItem">Main Site</li></a>
+            </ul>
+        </nav>
+    </header>
 
 <h1>create user</h1>
 
@@ -53,6 +78,6 @@ if(isset($_POST['submit'])){
 
     <button name="submit">Create User</button>
 </form>
-    
+<script src="../js/main.js"></script>
 </body>
 </html>
