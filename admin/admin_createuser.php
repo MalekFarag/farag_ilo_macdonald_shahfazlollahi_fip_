@@ -62,22 +62,25 @@ if(isset($_POST['submit'])){
             </ul>
         </nav>
     </header>
+<main class="adminArea">
+    <h2>create user</h2>
 
-<h1>create user</h1>
+    <?php echo !empty($message)? $message: ''; ?>
+    <form action="admin_createuser.php" method="post">
+        <label for="">Name</label><br>
+        <input type="text" name='name' value=''><br><br>
+        <label for="">Username</label><br>
+        <input type="text" name='username' value=''><br><br>
+        <label for="">Password</label><br>
+        <input type="text" name='password' value=''><br><br>
+        <label for="">Email</label><br>
+        <input type="email" name='email' value=''><br><br>
 
-<?php echo !empty($message)? $message: ''; ?>
-<form action="admin_createuser.php" method="post">
-    <label for="">Name</label><br>
-    <input type="text" name='name' value=''><br><br>
-    <label for="">Username</label><br>
-    <input type="text" name='username' value=''><br><br>
-    <label for="">Password</label><br>
-    <input type="text" name='password' value=''><br><br>
-    <label for="">Email</label><br>
-    <input type="email" name='email' value=''><br><br>
+        <button name="submit">Create User</button>
+    </form>
 
-    <button name="submit">Create User</button>
-</form>
+</main>
+
 <script src="../js/main.js"></script>
 </body>
 </html>

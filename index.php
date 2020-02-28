@@ -121,6 +121,28 @@
             <img src="images/rose.png" class='rose' alt="rose">
         </section>
 
+        <ul class='blog'>
+            <div class="blogPost">
+                <h4 class='title'>Why RHAC is Totally Awesome</h4>
+                <h5 class='subTitle'>And how you can support them!</h5>
+                <h6 class='author'>Malek Farag</h6>
+                <p class='date'>Feb 21st 2020</p>
+                <img src="images/opencloset.png" alt="">
+                <p class='text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <button class='edit' type='submit'>Learn More...</button>
+            </div>
+
+            <div class="blogPost">
+                <h4 class='title'>RHAC and how they help People!</h4>
+                <h5 class='subTitle'>"People are awesome", says RHAC Representative</h5>
+                <h6 class='author'>Malek Farag</h6>
+                <p class='date'>Feb 27st 2020</p>
+                <img src="images/pride.jpg" alt="">
+                <p class='text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                <button class='edit' type='submit'>Learn More...</button>
+            </div>
+        </ul>
+
 
         <!-- contact section -->
         <section id="contact">
@@ -184,7 +206,7 @@
 
     <div class="extra">
             <p>HIV/AIDS Connection&copy; - London 2020</p>
-        <a href="admin/admin_login.php">admin area</a>
+        <a href="admin/index.php">admin area</a>
         </div>
 
 

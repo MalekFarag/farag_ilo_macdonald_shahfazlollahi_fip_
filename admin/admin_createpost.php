@@ -30,31 +30,57 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+<header class="header">
+        <div class="white">
+            <a href="#content"><img src="../images/logo.png" alt="Logo" class="mainLogo"></a>
+            <div class="burger">
+                <div class="bLine"></div>
+                <div class="bLine"></div>
+                <div class="bLine"></div>
+            </div>
 
-<h1>create blog post</h1>
-<?php echo !empty($message)? $message: ''; ?>
-    <form action="admin_createpost.php" method="post">
-        <label for="author">author:</label>
-        <input type="author" name="author" id="author" value="">
-
-        <label for="date">date:</label>
-        <input type="text" name="date" id="date" value="">
-
-        <label for="title">title:</label>
-        <input type="text" name="title" id="title" value="">
-
-        <label for="sub_title">sub_title:</label>
-        <input type="sub_title" name="sub_title" id="sub_title" value="">
-
-        <label for="text">Blog text:</label>
-        <p>See image under for formatting:</p>
-        <img src="images/postformatting.pdf" alt="instructions">
-        <textarea type="text" name="text" id="text" value=""></textarea>
-
+        </div>
         
-        <button name="submit">Submit</button>
 
-    </form>
+        <nav class="mainNav">
+            <ul class="navList">
+                <a href="index.php"><li class="navItem">Home</li></a>
+                <a href="admin_createpost"><li class="navItem">Write Post</li></a>
+                <a href="admin_createuser.php"><li class="navItem">Create Account</li></a>
+                <a href="admin_logout.php"><li class="navItem">Logout</li></a>
+                <a href="../index.php"><li class="navItem">Main Site</li></a>
+            </ul>
+        </nav>
+    </header>
+
+
+<main class="adminArea createPostPage">
+    <h2>create blog post</h2>
+    <?php echo !empty($message)? $message: ''; ?>
+        <form action="admin_createpost.php" method="post">
+            <label for="author">author:</label>
+            <input type="author" name="author" id="author" value="">
+
+            <label for="date">date:</label>
+            <input type="text" name="date" id="date" value="">
+
+            <label for="title">title:</label>
+            <input type="text" name="title" id="title" value="">
+
+            <label for="sub_title">sub_title:</label>
+            <input type="sub_title" name="sub_title" id="sub_title" value="">
+
+            <label for="text">Blog text:</label>
+            <p>See image under for formatting:</p>
+            <img src="images/postformatting.pdf" alt="instructions">
+            <textarea type="text" name="text" id="text" value=""></textarea>
+
+            
+            <button name="submit">Submit</button>
+
+        </form>
+</main>
+
     <script src="../js/main.js"></script>
 </body>
 </html>
