@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="app">
+        <div class="container">
+            <header class="header">
+                <div class="white">
+                    <a href="#content"><img src="images/logo.png" alt="Logo" class="mainLogo"></a>
+                    <div class="burger">
+                        <div class="bLine"></div>
+                        <div class="bLine"></div>
+                        <div class="bLine"></div>
+                    </div>
+        
+                </div>
+                
+                <!-- add authentication for admin login and user sign-in using v-for/vi-if -->
+        
+                <nav class="mainNav">
+                    <ul class="navList">
+                        <a href="#content"><li class="navItem">Home</li></a>
+                        <a href="#campaign"><li class="navItem">Campaign</li></a>
+                        <a href="#about"><li class="navItem">About Us</li></a>
+                        <a href="#contact"><li class="navItem">Contact</li></a>
+                        <a href="#donate"><li class="navItem">Donate</li></a>
+                    </ul>
+                </nav>
+            </header>
+    
+    
+      
+          <!-- first thing in component templates should be a container -->
+          <router-view @authenticated="setAuthenticated" />
+
+          <!-- page content begins here -->
+          <div class="content">
+
+            
+        <!-- hero image  -->
+        <section class="hero">
+            <h2>Hi, <br>
+                We're here to help... <br>
+                <span>Everyone</span> 
+            </h2>
+
+        </section>
+
+        <div class="divide1"></div>
+
+        <!-- about campaign section -->
+        <section id="campaign">
+            <div class="buzz">
+                <i class="fas fa-hotdog"></i>
+                <p>Safe sex is great sex <br>
+                    <span>safety should always come first</span></p>
+            </div>
+
+            <div class="buzz">
+                <i class="fas fa-dove"></i>
+                <p>The Birds and the Bees <br>
+                    <span>sadly they don't wear condoms...</span</p>
+            </div>
+
+            <div class="buzz">
+                <i class="fas fa-book"></i>
+                <p>Come get some...info <br>
+                    <span class="learn">Learn more...</span></p>
+            </div>
+        </section>
+
+        <p class="buzzCopy">Traditional safe sex guides are often structured in a way that presumes everyone’s gender
+            (male/female/nonbinary/trans) is the same as the sex they were assigned at birth (male/female/intersex
+            or differences in sexual development).</p>
+
+        <div class="divide"></div>
+
+        <!-- about section -->
+        <section id="about">
+            <h2>About Us</h2>
+            <img src="images/about.jpg" alt="people happy">
+            <p>At an age where most are still struggling to come to terms with who they are, as a society, we have
+                failed to do enough ease or make the journey less confusing. This why we have launched the campaign
+                termed "Safe space: The birds and the Bees" where we provide information about safer sex in the
+                LBGTQA community.</p>
+        </section>
+
+        <!-- contact section -->
+        <section id="contact">
+            <h2>We want to hear from you!</h2>
+            <p>We're here to help</p>
+
+            <form action="" method="post">
+                <input type="text" placeholder="name">
+                <input type="text" placeholder="email">
+                <input type="text" placeholder="phone">
+                <textarea name="" id="message" placeholder="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+
+        </section>
+
+        <div class="divide"></div>
+
+        <!-- donate section -->
+        <section id="donate">
+            <h2>Help us spread the word</h2>
+            <p>your generous donation goes directly to helping people in need</p>
+            <button type="submit">Donate</button>
+        </section>
+
+        <div class="divide"></div>
+          </div>
+
+        </div>
+
+    </main>
+  
+   
+    <footer class="footer">
+        <nav class="footerNav">
+            <ul class="navList">
+                <a href="#content"><li class="navItem">Home</li></a>
+                <a href="#campaign"><li class="navItem">Campaign</li></a>
+                <a href="#about"><li class="navItem">About Us</li></a>
+                <a href="#contact"><li class="navItem">Contact</li></a>
+                <a href="#donate"><li class="navItem">Donate</li></a>
+            </ul>
+        </nav>
+
+        <div class="social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </footer>
+  
+
+    <!-- include libraries after if necessary -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+      integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+      crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+      integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+      crossorigin="anonymous"></script> -->
+  
+    <script type="module" src="js/App.js"></script>
+  </body>
+</html>
+
+

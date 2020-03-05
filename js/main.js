@@ -17,3 +17,6 @@ const nav = document.querySelector('.mainNav'),
           nav.classList.remove('navOn');
         })
       })
+
+
+  
