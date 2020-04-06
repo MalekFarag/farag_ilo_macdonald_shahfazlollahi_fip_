@@ -16,13 +16,16 @@ function login($username, $password, $ip){
     );
 
     if($user_set->fetchColumn()>0){
+        //encrypt password
+        $passEncryp = md5($password);
+
         //user exist
         $get_user_query = 'SELECT * FROM tbl_admins WHERE username = :username AND password = :password';
         $user_check = $pdo->prepare($get_user_query);
         $user_check->execute(
             array(
                 ':username'=>$username,
-                ':password'=>$password
+                ':password'=>$passEncryp
             )
         );
     while($found_user = $user_check->fetch(PDO::FETCH_ASSOC)){

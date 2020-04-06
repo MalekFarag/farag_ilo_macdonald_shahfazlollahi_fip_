@@ -3,19 +3,15 @@
     confirm_logged_in();
 
     if(isset($_POST['submit'])){
-        $author = trim($_POST['author']);
-        $title = trim($_POST['title']);
-        $sub_title = trim($_POST['sub_title']);
-        $text = trim($_POST['text']);
-        $date = trim($_POST['date']);
-        
-
-        if(!empty($author) && !empty($title) && !empty($sub_title) && !empty($text) && !empty($date)){
-            //Log user in
-            $message = createpost($author, $title, $sub_title, $text, $date);
-        }else{
-            $message = 'Please fill out the required field';
-        }
+        $post = array(
+            'author'=>$_POST['author'],
+            'title'=>$_POST['title'],
+            'sub_title'=>$_POST['sub_title'],
+            'text'=>$_POST['text'],
+            'date'=>$_POST['date'],
+            'image'=>$_FILES['image']
+        );
+            $message = createpost($post);
     }
 ?>
 
@@ -55,25 +51,28 @@
 
 
 <main class="adminArea createPostPage">
-    <h2>create blog post</h2>
+    <h2>Create Blog Post</h2>
     <?php echo !empty($message)? $message: ''; ?>
-        <form action="admin_createpost.php" method="post">
-            <label for="author">author:</label>
+        <form action="admin_createpost.php" method="post" enctype='multipart/form-data'>
+            <label for="author">Author:</label>
             <input type="author" name="author" id="author" value="">
 
-            <label for="date">date:</label>
+            <label for="date">Date:</label>
             <input type="text" name="date" id="date" value="">
 
-            <label for="title">title:</label>
+            <label for="title">Title:</label>
             <input type="text" name="title" id="title" value="">
 
-            <label for="sub_title">sub_title:</label>
+            <label for="sub_title">Sub Title:</label>
             <input type="sub_title" name="sub_title" id="sub_title" value="">
 
             <label for="text">Blog text:</label>
-            <p>See image under for formatting:</p>
-            <img src="images/postformatting.pdf" alt="instructions">
+            <!-- <p>See image under for formatting:</p>
+            <embed src="images/postformatting.pdf" /> -->
             <textarea type="text" name="text" id="text" value=""></textarea>
+
+            <label for="image">Image Upload</label>
+            <input type="file" name="image" id="image">
 
             
             <button name="submit">Submit</button>

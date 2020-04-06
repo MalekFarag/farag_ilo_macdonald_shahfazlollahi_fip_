@@ -29,6 +29,10 @@
             $message = 'Please fill out the required field';
         }
     }
+
+    $previewPosts = previewPosts();
+
+
 ?>
 
 
@@ -121,27 +125,20 @@
             <img src="images/rose.png" class='rose' alt="rose">
         </section>
 
-        <ul class='blog'>
+        <!-- loading 3 posts -->
+        <div class="blog">
+            <?php while ($row = $previewPosts->fetch(PDO::FETCH_ASSOC)): ?>
             <div class="blogPost">
-                <h4 class='title'>Why RHAC is Totally Awesome</h4>
-                <h5 class='subTitle'>And how you can support them!</h5>
-                <h6 class='author'>Malek Farag</h6>
-                <p class='date'>Feb 21st 2020</p>
-                <img src="images/opencloset.png" alt="">
-                <p class='text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <button class='edit' type='submit'>Learn More...</button>
+                <h4 class='title'><?php echo $row['title']; ?></h4>
+                <h5 class='subTitle'><?php echo $row['sub_title']; ?></h5>
+                <h6 class='author'><?php echo $row['author']; ?></h6>
+                <p class='date'><?php echo $row['date']; ?></p>
+                <img src="images/<?php echo $row['image']; ?>" alt="image">
+                <p class='text'><?php echo $row['text']; ?></p>
+                <a href="blog.php" class='edit'>Learn More...</a>
             </div>
-
-            <div class="blogPost">
-                <h4 class='title'>RHAC and how they help People!</h4>
-                <h5 class='subTitle'>"People are awesome", says RHAC Representative</h5>
-                <h6 class='author'>Malek Farag</h6>
-                <p class='date'>Feb 27st 2020</p>
-                <img src="images/pride.jpg" alt="">
-                <p class='text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
-                <button class='edit' type='submit'>Learn More...</button>
-            </div>
-        </ul>
+            <?php endwhile; ?>
+        </div>
 
 
         <!-- contact section -->

@@ -60,6 +60,9 @@ function createuser($username, $name, $email, $password, $ip){
             $message= $mail->ErrorInfo;
             return 'user creation did not got through';
         }else{
+            //encrypt passowrd
+            $passEncryp = md5($password);
+
             //creating user sql query from form details
             $create_user_query = "INSERT INTO tbl_admins (id, username, name, email, password, ip) VALUES (NULL, :username, :name, :email, :password, :ip);";
 
@@ -69,7 +72,7 @@ function createuser($username, $name, $email, $password, $ip){
                     ':name'=>$name,
                     ':username'=>$username,
                     ':email'=>$email,
-                    ':password'=>$password,
+                    ':password'=>$passEncryp,
                     ':ip'=>$ip
                 )
             );

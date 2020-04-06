@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.9.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 26, 2020 at 10:26 PM
--- Server version: 5.7.26
--- PHP Version: 7.2.18
+-- Generation Time: Apr 06, 2020 at 10:53 PM
+-- Server version: 10.4.10-MariaDB
+-- PHP Version: 7.3.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS `tbl_admins` (
 --
 
 INSERT INTO `tbl_admins` (`id`, `username`, `name`, `email`, `password`, `ip`) VALUES
-(1, 'admin1', 'admin', 'test', 'test', '::1');
+(1, 'admin1', 'admin', 'test', '1a1dc91c907325c69271ddf0c944bc72', '::1');
 
 -- --------------------------------------------------------
 
@@ -57,11 +57,12 @@ CREATE TABLE IF NOT EXISTS `tbl_blog` (
   `id` int(8) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) NOT NULL,
   `sub_title` varchar(100) NOT NULL,
+  `image` varchar(64) NOT NULL,
   `author` varchar(42) NOT NULL,
   `text` text NOT NULL,
   `date` varchar(32) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
