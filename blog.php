@@ -69,7 +69,6 @@ $previewPosts = getAllPosts();
                 <p class='date'><?php echo $row['date']; ?></p>
                 <img src="images/<?php echo $row['image']; ?>" alt="image">
                 <p class='text'><?php echo $row['text']; ?></p>
-                <a href="blog.php" class='edit'>Learn More...</a>
             </div>
             <?php endwhile; ?>
         </div>

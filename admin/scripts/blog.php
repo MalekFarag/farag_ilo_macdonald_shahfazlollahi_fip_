@@ -105,7 +105,7 @@ function editPost($id, $author, $title, $sub_title, $text, $date){
     if($edit_post_res){
         redirect_to('index.php');
     }else{
-        return 'There was an error updating this post...';
+        $message = 'There was an error updating this post...';
     }
 }
 
@@ -119,6 +119,6 @@ function deletePost($id){
     if($delete_post_res){
         redirect_to('index.php');
     }else{
-        return 'There was an error updating this post...';
+        $message = 'There was an error updating this post...';
     }
 }
