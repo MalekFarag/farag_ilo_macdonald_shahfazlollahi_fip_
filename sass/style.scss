@@ -466,6 +466,10 @@ body{
 
 
 .adminArea{
+    padding-top: 100px;
+    h2{
+        font-size: 30px;
+    }
     form{
         margin: 10px auto;
         display: flex;
@@ -549,12 +553,6 @@ body{
     }
 }
 
-.createPostPage{
-    h2{
-        padding-top: 150px; 
-        font-size: 300px; 
-    }
-}
 
 
 .blog{
@@ -606,3 +604,4 @@ body{
 
     }
 }
+

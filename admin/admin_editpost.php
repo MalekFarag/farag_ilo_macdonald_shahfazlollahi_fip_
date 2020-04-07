@@ -57,29 +57,32 @@ if(isset($_POST['submit'])){
             </ul>
         </nav>
     </header>
+    <main class="adminArea">
+        <h2>Edit Post</h2>
+        <?php echo !empty($message)? $message : '';?>
+        <form action="admin_editpost.php" method="post" class='editPost'>
+        <?php while ($row = $previewPosts->fetch(PDO::FETCH_ASSOC)): ?>
+            <label for="">Title</label>
+            <input type="text" name='title' value="<?php echo $row['title']; ?>">
 
-    <h2>Edit Post</h2>
-    <?php echo !empty($message)? $message : '';?>
-    <form action="admin_editpost.php" method="post">
-    <?php while ($row = $previewPosts->fetch(PDO::FETCH_ASSOC)): ?>
-        <label for="">Title</label>
-        <input type="text" name='title' value="<?php echo $row['title']; ?>">
+            <label for="">Sub Title</label>
+            <input type="text" name='sub_title' value="<?php echo $row['sub_title']; ?>">
 
-        <label for="">Sub Title</label>
-        <input type="text" name='sub_title' value="<?php echo $row['sub_title']; ?>">
+            <label for="">Author</label>
+            <input type="text" name='author' value="<?php echo $row['author']; ?>">
 
-        <label for="">Author</label>
-        <input type="text" name='author' value="<?php echo $row['author']; ?>">
+            <label for="">Date</label>
+            <input type="text" name='date' value="<?php echo $row['date']; ?>">
 
-        <label for="">Date</label>
-        <input type="text" name='date' value="<?php echo $row['date']; ?>">
+            <label for="">Text</label>
+            <textarea name="text"><?php echo $row['text']; ?></textarea>
+        <?php endwhile; ?>
 
-        <label for="">Text</label>
-        <textarea name="text"><?php echo $row['text']; ?></textarea>
-    <?php endwhile; ?>
+        <button name='submit'>Edit Post</button>
+        </form>
+    </main>
 
-    <button name='submit'>Edit Post</button>
-    </form>
+    
     
 
 
