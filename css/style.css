@@ -127,20 +127,20 @@ p {
 #content {
   color: white;
   margin: 0 auto;
-  max-width: 840px;
+  max-width: 960px;
 }
 #content .copy {
-  font-size: 16px;
+  text-align: center;
+  font-size: 1em;
   color: white;
   letter-spacing: 1px;
-  line-height: 1.2;
-  padding: 1em 0.5em;
+  line-height: 1.4;
+  padding: 1em 1.5em;
 }
 #content .hero {
   margin: 0 auto;
 }
 #content .hero img {
-  max-width: 1080px;
   width: 100%;
   box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25), 0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
 }
@@ -198,29 +198,28 @@ p {
   font-size: 14px;
   color: #7d737f;
   transition: all 0.1s ease;
+  transform: scale(1.1);
 }
 #content #campaign .links .campaign-link:hover {
   background-color: #6f437a;
   color: rgba(216, 0, 0, 0.6);
-  transform: scale(1.1);
 }
 #content .content-pic {
   margin: 0 auto;
-  padding: 2.75em 0.5em;
-  max-width: 1080px;
 }
 #content .content-pic .content__img {
   width: 100%;
   box-shadow: 0.25em #7d737f;
 }
 #content #contact {
+  margin: 0 auto;
   margin: 50px 0;
 }
-#content #contact p {
-  font-size: 16px;
-  margin: 10px 0;
+#content #contact .contact-deets {
+  padding: 0.5em 0.5em;
 }
 #content #contact form {
+  max-width: 480px;
   margin: 10px auto;
 }
 #content #contact form input, #content #contact form textarea {
@@ -265,17 +264,9 @@ p {
   transform: scale(1.1);
 }
 #content #donate {
+  margin: 0 auto;
   margin: 50px auto;
   padding: 0.25em 0.5em;
-}
-#content #donate h2 {
-  font-size: 24px;
-}
-#content #donate p {
-  font-size: 14px;
-  margin: 20px 0;
-  padding: 0 20px;
-  line-height: 20px;
 }
 #content #donate button {
   background-color: white;
@@ -297,6 +288,7 @@ p {
   transform: scale(1.1);
 }
 #content .newsletter {
+  margin: 0 auto;
   background-color: #6f437a;
   margin-bottom: 30px;
 }
@@ -333,13 +325,28 @@ p {
 }
 #content .newsletter .news-image {
   margin: 0 auto;
-  padding: 1.25em 0.5em;
   max-width: 1080px;
 }
 #content .newsletter .news-pic {
   width: 100%;
 }
 
+@media screen and (min-width: 720px) {
+  #content {
+    margin: 0 auto;
+  }
+  #content h3 {
+    font-size: 2.75em;
+  }
+  #content .copy {
+    font-size: 1em;
+    line-height: 1.5;
+    padding: 1.5em 1.5em;
+  }
+  #content .info h2 {
+    margin-top: 0.5em;
+  }
+}
 .footer {
   padding: 1.75em 0.5em;
   background-color: whitesmoke;
@@ -506,11 +513,8 @@ p {
   padding: 1em 1em;
   display: flex;
   justify-content: space-between;
-  padding: 1em;
-  position: fixed;
   z-index: 1;
   width: 100%;
-  margin-bottom: 60px;
 }
 .talk-header .white {
   margin: 0 auto;
@@ -580,12 +584,16 @@ p {
 }
 
 .talk-deets {
-  background-color: ffffff;
-  margin-top: 60px;
+  background-color: #ffffff;
   color: white;
   margin: 0 auto;
   padding: 2.5em 0.5em;
   max-width: 840px;
+}
+.talk-deets h3 {
+  color: #3d3c3d;
+  text-align: center;
+  font-weight: bold;
 }
 .talk-deets .video-box {
   margin-top: 60px;
@@ -686,6 +694,86 @@ p {
   color: rgba(216, 0, 0, 0.6);
 }
 
+.community {
+  margin: 0 auto;
+  padding: 0.75em 0.75em;
+  background: #3d3c3d;
+}
+.community h2 {
+  margin-top: 20px;
+  text-align: center;
+  padding: 0.25em;
+  font-weight: bold;
+  color: whitesmoke;
+  font-size: 2.75em;
+  line-height: 1.2;
+}
+.community .support-img {
+  margin: 0 auto;
+  margin: 40px 0 20px 0;
+}
+.community .support-img .support-pic {
+  width: 100%;
+}
+.community h4 {
+  margin: 20px 0 20px 0;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.75em;
+}
+.community .support-links {
+  margin: 0 auto;
+  padding: 2.5em 2.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.community .support-links .support-link {
+  background-color: white;
+  border-radius: 2.5em;
+  margin: 10px auto;
+  border: 0.25em solid #6f437a;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-family: "Raleway";
+  font-size: 14px;
+  color: #7d737f;
+  transition: all 0.1s ease;
+}
+.community .support-links .support-link:hover {
+  background-color: #6f437a;
+  color: rgba(216, 0, 0, 0.6);
+  transform: scale(1.1);
+}
+
+.crisis-box {
+  padding: 1.5em 2.5em;
+  margin: 0 auto;
+  background-color: #6f437a;
+}
+.crisis-box .crisis {
+  color: whitesmoke;
+}
+.crisis-box .crisis h4 {
+  text-align: center;
+  margin: 20px 0 20px 0;
+}
+.crisis-box .crisis p {
+  text-align: center;
+  padding: 0.25em;
+  line-height: 1.2;
+}
+
+@media screen and (min-width: 840px) {
+  .community h2 {
+    font-size: 3.75em;
+  }
+  .community h4 {
+    font-size: 2.75em;
+  }
+}
 .extra {
   color: #4D4D4F;
   font-size: 11px;

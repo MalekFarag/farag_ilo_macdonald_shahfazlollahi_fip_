@@ -2,16 +2,17 @@
     color: white;
     margin: 0 auto;
     // padding-top: 80px;
-    max-width: 840px;
+    max-width: 960px;
     
     // padding: .5em .5em;
 
     .copy{
-        font-size: 16px;
+        text-align: center;
+        font-size: 1em;
         color: white;
         letter-spacing: 1px;
-        line-height: 1.2;
-        padding: 1em .5em;
+        line-height: 1.4;
+        padding: 1em 1.5em;
     }
 
     .hero{
@@ -19,7 +20,7 @@
         // width: 100%;
         // padding: .75em .5em;
         img {
-            max-width: 1080px;
+            // max-width: 1080px;
             width: 100%;
             box-shadow: 0.25em 0.25em .75em rgba(0,0,0,.25),
             0.125em 0.125em 0.25em rgba(0,0,0,.15);
@@ -38,7 +39,6 @@
                 padding: .25em .5em;
                 line-height: 1;
                 font-weight: bolder;
-
             }
 
             p{
@@ -70,8 +70,6 @@
             text-align: left;
             padding: .25em .5em;
             font-weight: bolder;
-           
-            
             }
 
             p{
@@ -105,18 +103,17 @@
                     &:hover{
                         background-color: #6f437a;
                         color: rgba(216, 0, 0, .6);
-                        transform: scale(1.1);
+                    }    transform: scale(1.1);
             }
 
         }
-    }
-}
 
+    }  
 
     .content-pic {
         margin: 0 auto;
-        padding: 2.75em .5em;
-        max-width: 1080px;
+        // padding: 2.75em .5em;
+        // max-width: 1080px;
 
         .content__img {
             width: 100%;
@@ -127,15 +124,21 @@
    
 
     #contact{
+        margin: 0 auto;
         margin: 50px 0;
-   
-
-        p{
-            font-size: 16px;
-            margin: 10px 0;
+        
+        .contact-deets {
+            padding: .5em .5em;
+            // max-width: 720px;
         }
 
+        // p{
+        //     font-size: 16px;
+        //     margin: 10px 0;
+        // }
+
         form{
+            max-width: 480px;
             margin: 10px auto;
             input, textarea{
                 margin: 8px auto;
@@ -188,20 +191,10 @@
 
     
     #donate{
+        margin: 0 auto;
         // background-color: whitesmoke; 
         margin: 50px auto;
         padding: .25em .5em;
-
-        h2{
-            font-size: 24px;
-        }
-
-        p{
-            font-size: 14px;
-            margin: 20px 0;
-            padding: 0 20px;
-            line-height: 20px;
-        }
 
         button{
             background-color: white;
@@ -224,11 +217,12 @@
                 background-color: #6f437a;
                 color: rgba(216, 0, 0, .6);
                 transform: scale(1.1);
+            }
     }
-        }
-    }
+}
 
     .newsletter{
+        margin: 0 auto;
         background-color: #6f437a;
         margin-bottom: 30px;
 
@@ -268,12 +262,13 @@
                 background-color: #6f437a;
                 color: rgba(216, 0, 0, .6);
                 transform: scale(1.1);
-    }
-         }
+            }
+        }
+         
 
          .news-image {
             margin: 0 auto;
-            padding: 1.25em .5em;
+            // padding: 1.25em .5em;
             max-width: 1080px;
          }
 
@@ -282,3 +277,28 @@
          }
     }
 }
+
+
+// media queries here 
+@media screen and (min-width: 720px) {
+    #content {
+        margin: 0 auto;
+        h3 {
+            font-size: 2.75em; 
+        }
+
+        .copy {
+            font-size: 1em;
+            line-height: 1.5;
+            padding: 1.5em 1.5em;
+        }
+
+        .info {
+            h2 {
+                margin-top: .5em;
+            }
+        }
+    }
+} 
+
+

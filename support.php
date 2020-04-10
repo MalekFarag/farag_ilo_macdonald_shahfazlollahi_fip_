@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>HIV AIDS Connection - Community Support</title>
+    <title>HIV AIDS Connection - Get Talking</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -35,10 +35,63 @@
             </ul>
         </nav>
     </header>
+        
+    </main id="content" class="talk-container">
 
-    <main class="container-support">
+        <section class="community">
+            <h2>COMMUNITY SUPPORT</h2>
+            <div class="support-img">
+                <img src="images/about.jpg" alt="Image of indiviual sitting" class="support-pic">
+            </div>
+            <h4>Here are some links to Our Community Support:</h4>
+            <div class="support-links">
+                <a class="support-link" href="http://www.springtideresources.org/sites/all/files/Trans%20Women%20Safer%20Sex%20Guide.pdf">Spring Tide</a>
+                <a class="support-link"  href="https://www.toronto.ca/community-people/health-wellness-care/sexual-health-infoline-ontario/">Ontario Health and Wellness</a>
+                <a class="support-link"  href="https://www.ovc.gov/pubs/forge/tips_outreach.html">Outreach</a>
+                <a class="support-link"  href="https://seawayvalleychc.ca/lgbtq-resources/">Seaway Valley</a>
+                <a class="support-link"  href="https://www.youthline.ca/">YouthLine</a>
+                <a class="support-link"  href="https://www.sexandu.ca">Sex & U</a>
+                <a class="support-link"  href="https://www.scarleteen.com/">Scarlet Teen</a>
+            </div>
 
-    <section class="support-links">
+        </section>
+
+        <section class="crisis-box">
+        <div class="crisis">
+                <h4>NEED HELP?</h4>
+                <!-- <h4>TRANSGENDER SPECIFIC</h4> -->
+                <h4>If You are in a situation where you need someone to talk to:</h4>
+                <p class="copy">Call a counsellor: 1-800-668-6868 </p>
+                <p class="copy">https://kidsphone.ca/</p>
+            </div>
+        </section>
+
+        <footer class="footer">
+
+            <div class="social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+
+            <div class="extra">
+                <p>HIV/AIDS Connection&copy; - London 2020</p>
+                <a href="admin/index.php">admin area</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
+
+
+
+
+
+    <!-- <section class="support-links">
         <div class="support">
             <img src="images/opencloset.png" alt="Image of Open closet campaign ad" class="news-pic">
             <h4>Here are some links to Our Community Support:</h4>
@@ -50,31 +103,10 @@
             <p class="copy">https://www.sexandu.ca</p>
             <p class="copy">https://www.scarleteen.com/</p>
         </div>
-    </section>
+    </section> -->
 
-    <section class="crisis">
+    <!-- <section class="crisis">
         <h4>If You are in a situation where you need someone to talk to:</h4>
         <p class="copy">Call a counsellor: 1-800-668-6868 </p>
         <p class="copy">https://kidsphone.ca/</p>
-    </section>
-
-    <footer class="footer">
-
-    <div class="social">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-    </div>
-
-    <div class="extra">
-        <p>HIV/AIDS Connection&copy; - London 2020</p>
-    <a href="admin/index.php">admin area</a>
-    </div>
-    </footer>
-
-    </main>
-
-    <script src="js/main.js"></script>
-</body>
-</html>
+    </section> -->

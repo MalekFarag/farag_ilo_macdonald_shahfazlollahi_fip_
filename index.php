@@ -128,7 +128,7 @@
 
         <!-- donate section -->
         <section id="donate">
-            <h2>Support The Cause</h2>
+            <h3>Support The Cause</h3>
             <p class='copy'>Help us spread the word, in partnership with              
             the Regional HIV/AIDS Connection, you can support us; helping to spread the word and keep everyone healthy and protected</p>
             <!-- link to paypal or something -->
@@ -142,7 +142,7 @@
             <h3>Stay Updated with us!</h3>
             <p class="copy">Become a member of our ever-growing community by signing up. Read the latest blog posts and get updated on upcoming events and activities.</p>
             <?php echo !empty($message)? $message: ''; ?>
-            <form action="index.php" method="post">
+            <form class="form-container" action="index.php" method="post">
                 <input type="text" name='name2' placeholder="name" required>
                 <input type="email" name='email2' placeholder="email" required>
                 <input type="text" name='phone2' placeholder="phone" required>
@@ -155,8 +155,7 @@
             <h3>Contact Us</h3>
 
             <div class="contact-deets">
-            <p class="copy">We are here to listen and would love to answer any questions you have!</p>
-            <p class='copy'>We want to help so feel free to ask us anything; no matter how uncomfy it might be!</p>
+            <p class="copy">We are here to listen and would love to answer any questions you have!. We want to help so feel free to ask us anything; no matter how uncomfy it might be!</p>
             </div>
 
             <?php echo !empty($message)? $message: ''; ?>

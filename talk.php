@@ -38,9 +38,10 @@
         
     </main id="content" class="talk-container">
         <section class="talk-deets">
+            <h3>We are interested in creating awareness and helping one another.</h3>
         <div class="video-box">
             <!-- insert video here -->
-            <video src="video/kobe_vid.mp4" controls></video>
+            <video src="video/long_vid.mp4" controls></video>
         </div>
         
         </section>

@@ -1,4 +1,10 @@
+// import router from "./components/Router.js";
 console.log('js linked.');
+
+// const myVM = new Vue({
+//   router
+  
+// }).$mount("#app")
 
 
 const nav = document.querySelector('.mainNav'),
