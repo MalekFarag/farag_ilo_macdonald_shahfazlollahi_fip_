@@ -1,0 +1,50 @@
+
+.blog{
+    display: flex;
+    flex-direction: column;
+    .blogPost{
+        padding: 20px;
+        margin: 50px auto;
+        box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.2);
+
+        h4{
+            font-size: 24px;
+        }
+        h5{
+            font-style: italic;
+            margin-top: 10px;
+        }
+        h6{
+            margin-top: 5px;
+            font-size: 12px;
+        }
+        .date{
+            margin-top: 5px;
+            font-style: italic;
+            font-size: 12px;
+            opacity: .8;
+        }
+
+        img{
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .text{
+            font-size: 14px;
+            letter-spacing: 1px;
+            line-height: 22px;
+        }
+
+        .edit{
+            background: none;
+            border: none;
+            font-family: 'Raleway';
+            color: rgba(216, 0, 0, .6);
+            text-decoration: underline;
+            margin-top: 10px;
+            font-size: 12px;
+        }
+
+    }
+}
