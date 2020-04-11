@@ -4,20 +4,21 @@
 
 ##### Built with PHP, MySql, SASS, JS
 
-### Contributors
-#### Devs
+## Contributors
+### Devs
 ##### Front: Collins Ilo & Malek Farag
 ##### Backend: Malek Farag
 
-#### Designers
+### Designers
 ##### Nick Shahfazlollahi
 ##### Kathleen MacDonald
 
-### Prerequisites 
+## Prerequisites 
 ##### WAMP/MAMP
 
-### How to Install
-##### 1. Download Repository
-##### 2. Place repo in www or htdocs folder
-##### 3. Edit the password in config.php accordingly
-##### 4. `local/*repoName*` in the url bar
+## How to Install
+#### 1. Download Repository
+#### 2. Start MAMP/WAMP
+#### 3. Place repo in www or htdocs folder
+#### 4. Edit the password in config.php accordingly
+#### 5. `localhost/*repoName*` in the url bar
