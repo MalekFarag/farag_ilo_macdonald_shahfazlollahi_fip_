@@ -22,3 +22,7 @@
 #### 3. Place repo in www or htdocs folder
 #### 4. Edit the password in config.php accordingly
 #### 5. `localhost/*repoName*` in the url bar
+
+## Admin Login
+#### user: `admin1`
+#### pass: `pass`
