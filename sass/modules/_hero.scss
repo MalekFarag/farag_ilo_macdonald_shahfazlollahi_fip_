@@ -1,0 +1,59 @@
+.hero{
+    width: 100%;
+    background-color: #F8FAF9;
+
+    img{
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .heroInfo{
+        background-color: rgb(153, 105, 160);
+        position: relative;
+        top: -5px;
+        color: white;
+
+        h1{
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            font-size: 26px;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
+
+        p{
+            padding-bottom: 20px;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .hero{
+
+        .heroInfo{
+            background-color: rgba(153, 105, 160, 0);
+            position: absolute;
+            top: 150px;
+            left: 50%;
+            max-width: 1000px;
+            transform: translateX(-50%);
+            color: black;
+            z-index: 1;
+            text-align: left;
+            h1{
+                font-size: 40px;
+            }
+            p{
+                font-size: 22px;
+            }
+        }
+
+    }
+}

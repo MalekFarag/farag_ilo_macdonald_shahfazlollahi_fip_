@@ -1,0 +1,83 @@
+.header{
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+
+    margin: 0 auto;
+
+    .white{
+        margin: 0 auto;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #ffffff;
+    }
+
+    
+
+    .mainLogo{
+        margin: 10px 0;
+        height: 50px;
+        align-self: center;
+        z-index: 1;
+        filter: grayscale(100%);
+    }
+    .burger{
+        align-self: center;
+        width: 26px;
+        cursor: pointer;
+        z-index: 1;
+        .bLine{
+            border-radius: 10px;
+            height: 4px;
+            margin-top: 4px;
+            background-color: #4D4D4F;
+        }
+    }
+
+    .mainNav{
+        position: absolute;
+        z-index: -10;
+        width: 100%;
+        top: -500px;
+        left: 0;
+        pointer-events: none; 
+        transition: all .4s ease;
+        .navList{
+            padding: 10px auto;
+            width: 95%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            a{
+                color: #4D4D4F;
+                text-decoration: none;
+                width: 85%;
+                padding: 30px 0;
+
+                border-bottom: solid 1px #86558E;
+
+                transition: all .1s ease;
+            }
+
+            a:hover{
+                color: #86558E;
+            }
+
+            a:last-child{
+                color: #ffffff;
+                background-color: #86558E;
+            }
+
+        }
+    }
+
+    .navOn{
+        background-color: white;
+        pointer-events: all;
+        top: 70px;
+        z-index: 1;
+    }
+}
