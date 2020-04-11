@@ -467,6 +467,12 @@ body{
 
 .adminArea{
     padding-top: 100px;
+
+    .invisible{
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
+    }
     h2{
         font-size: 30px;
     }

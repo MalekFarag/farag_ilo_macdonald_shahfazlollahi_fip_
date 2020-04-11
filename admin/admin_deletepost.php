@@ -10,7 +10,8 @@ if(isset($_GET['id'])){
 
 
 if(isset($_POST['submit'])){
-    $message = deletePost($id);
+    $id = trim($_POST['id']);
+    deletePost($id);
 }
 
 
@@ -56,6 +57,7 @@ if(isset($_POST['submit'])){
     <?php echo !empty($message)? $message : '';?>
     <form action="admin_deletepost.php" method="post">
     <?php while ($row = $previewPosts->fetch(PDO::FETCH_ASSOC)): ?>
+        <input class='invisible' type="text" name='id' value="<?php echo $row['id']; ?>">
         <div class="blog">
             <div class="blogPost">
                 <h4 class='title'><?php echo $row['title']; ?></h4>

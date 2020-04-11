@@ -15,8 +15,10 @@ if(isset($_POST['submit'])){
     $sub_title = trim($_POST['sub_title']);
     $text = trim($_POST['text']);
     $date = trim($_POST['date']);
+    $id = trim($_POST['id']);
+    
 
-    $message = editPost($id, $author, $title, $sub_title, $text, $date);
+    editPost($id, $author, $title, $sub_title, $text, $date);
 }
 
 
@@ -62,6 +64,8 @@ if(isset($_POST['submit'])){
         <?php echo !empty($message)? $message : '';?>
         <form action="admin_editpost.php" method="post" class='editPost'>
         <?php while ($row = $previewPosts->fetch(PDO::FETCH_ASSOC)): ?>
+            <input class='invisible' type="text" name='id' value="<?php echo $row['id']; ?>">
+
             <label for="">Title</label>
             <input type="text" name='title' value="<?php echo $row['title']; ?>">
 
