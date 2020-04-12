@@ -44,6 +44,7 @@
     <h2>Welcome, <?php echo $_SESSION['name']; ?></h2><br>
         <ul>
             <a href="admin_createuser.php">Create User</a>
+            <a href="admin_edituser.php">Edit Current User</a>
             <a href="admin_createpost.php">Create Blog Post</a>
             <a href="admin_logout.php">Logout</a>
         </ul>
