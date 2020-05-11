@@ -37,11 +37,11 @@ function sendMessage($name, $email, $phone, $body, $ip){
         $mail->Port = 465;
         $mail->SMTPAuth=true;
 
-        $mail->Username='faragmalek14@gmail.com'; // add company email
-        $mail->Password='Malooky14'; // please dont steal my password. I really dont want to change it
+        $mail->Username='company@gmail.com'; // add company email
+        $mail->Password='companypass'; // please dont steal my password. I really dont want to change it
 
-        $mail->addAddress('faragmalek14@gmail.com');
-        $mail->setFrom('faragmalek14@gmail.com');
+        $mail->addAddress('company@gmail.com');
+        $mail->setFrom('company@gmail.com');
         
 
         $mail->isHTML(true);
